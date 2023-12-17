@@ -90,8 +90,11 @@ if (getCookie("user_cookie") != false) {
     user_cookie = getCookie("user_cookie");
 }
 
-if (typeof user_cookie !== 'undefined') {
-    document.getElementById('shippingUsername').innerHTML = user_cookie["name"];
+let shippingUsername = document.getElementById('shippingUsername');
+if (shippingUsername) {
+    if (typeof user_cookie !== 'undefined') {
+        document.getElementById('shippingUsername').innerHTML = user_cookie["name"];
+    }
 }
 
 function inventory_amt(input) {

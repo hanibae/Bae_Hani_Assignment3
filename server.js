@@ -27,6 +27,13 @@ app.use(cookieParser());
 const fs = require ('fs');
 const qs = require('qs');
 const crypto = require ('crypto');
+//const nodemailer = require('nodemailer');
+
+/*const transporter = nodemailer.createTransport({
+  host: 'mail.hawaii.edu',
+  port: 25,
+  secure: false, // true for 465, false for other ports
+});*/
 
 //monitor all requests regardless of their method (GET, POST, PUT, etc) and their path (URL)
 app.all('*', function (request, response, next) {
@@ -415,6 +422,22 @@ app.post("/complete_purchase", function(request, response) {
   request.session.destroy();
 
   response.send(invoice_str);
+
+  /*
+  let mailOptions = {
+    from: 'haeunb@hawaii.edu',
+    to: email,
+    subject: 'Your Invoice',
+    html: invoice_str
+  };
+
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  })*/
 });
 
 //handle POST request to the path /process_logout
