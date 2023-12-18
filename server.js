@@ -220,8 +220,6 @@ app.post("/process_register", function(request, response) {
     response.cookie("user_cookie", JSON.stringify(user_cookie), {maxAge: 900 * 1000});
     console.log(user_cookie);
 
-
-
     //asynchronously write the updated user_data and products to their respective files
     fs.writeFile(__dirname + '/user_data.json', JSON.stringify(user_data), 'utf-8', (err) => {
       if (err) {
