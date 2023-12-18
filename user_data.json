@@ -1,12 +1,1 @@
-{
-  "haeunb@hawaii.edu": {
-    "name": "Hani",
-    "password": "c96df08c65428c009be181da89f1d4ef4f22ec6b8d5fe6b718fa7203e222a837",
-    "status": false
-  },
-  "itm352@hawaii.edu": {
-    "name": "itm352",
-    "password": "cb8ef6444b43f18fedf1f8347c5cd667f442473878cc1c9547f74564ed6f865d",
-    "status": false
-  }
-}
+{"haeunb@hawaii.edu":{"name":"Hani","password":"c96df08c65428c009be181da89f1d4ef4f22ec6b8d5fe6b718fa7203e222a837","status":false},"itm352@hawaii.edu":{"name":"itm352","password":"cb8ef6444b43f18fedf1f8347c5cd667f442473878cc1c9547f74564ed6f865d","status":false}}
