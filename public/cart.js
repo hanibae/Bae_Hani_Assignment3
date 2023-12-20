@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //if nothing has been added to the cart, hide the submit buttons and display 'empty cart'
         if (subtotal === 0) {
-            document.getElementById('cart_container').innerHTML = `<p class="lead">Your cart is empty</p>`;
+            document.getElementById('cart_container').innerHTML = `<br><br><br><br><p class="lead">Your cart is empty</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>`;
         } else {
             document.getElementById('cartUpdate').style.display = 'none';
         }
@@ -114,7 +114,8 @@ function removeItem(productKey, index) {
     //update the input value to 0
     let inputElement = document.getElementById(`cartInput_${productKey}${index}`);
     if (inputElement) {
-        inputElement.value = 0;
+        inputElement.setAttribute('value', 0);
+        //inputElement.value = 0;
         //call update_qty to recalculate extended price
         update_qty(`cartInput_${productKey}${index}`, 0, products[productKey][index].price);
     }
